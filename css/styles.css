@@ -7,6 +7,7 @@
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
+  --icon-color: #afb1b8;
 }
 
 *,
@@ -275,6 +276,7 @@ svg {
 
 .team-list-item {
   width: 270px;
+  padding-bottom: 30px;
   background-color: var(--primary-background-color);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -287,7 +289,9 @@ svg {
 }
 
 .card-content {
-  padding: 30px 32px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  padding: 0 32px;
 }
 
 .team-subtitle {
@@ -307,6 +311,36 @@ svg {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.social-list {
+  display: flex;
+  padding: 0 32px;
+}
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+.social-link:hover,
+.social-link:focus,
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--acent-color);
+  fill: var(--primary-background-color);
 }
 
 /* ------------------------REGULAR CLIENTS------------------------ */
@@ -354,6 +388,13 @@ svg {
   margin: 0 auto;
   background-color: var(--footer-background-color);
 } */
+
+.footer .container {
+  display: flex;
+}
+.footer-address {
+  margin-right: 70px;
+}
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -393,6 +434,31 @@ svg {
 .footer-tel-link:hover,
 .footer-tel-link:focus {
   color: var(--acent-color);
+}
+
+.join-content {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-on-acent-background);
+}
+.footer .social-list {
+  padding: 0;
+}
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .social-link:hover,
+.footer .social-link:focus {
+  background-color: var(--acent-color);
+}
+.footer .social-icon {
+  fill: var(--text-color-on-acent-background);
 }
 /* ------------------------ OUR WORKS------------------------ */
 .works {
