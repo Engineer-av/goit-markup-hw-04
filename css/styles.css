@@ -509,6 +509,13 @@ img {
 .works-examples-item {
   width: 370px;
 }
+
+.works-examples-item:hover,
+.works-examples-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
 .works-examples-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -541,6 +548,7 @@ img {
 }
 .filter-btn:hover,
 .filter-btn:focus {
+  cursor: pointer;
   color: var(--text-color-on-acent-background);
   background-color: var(--acent-color);
 }
