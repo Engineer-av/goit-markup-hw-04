@@ -87,10 +87,13 @@ img {
   margin-right: 50px;
 }
 
+.navigation-list-link {
+  display: block;
+  color: var(--title-text-color);
+}
 .navigation-list-link,
 .header-mail-link,
 .header-tel-link {
-  display: block;
   padding: 32px 0px;
   align-items: center;
 
@@ -98,26 +101,34 @@ img {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
+}
+
+.contact-list-item {
+  color: var(--primary-text-color);
 }
 .address-icon {
   display: inline-block;
   margin-right: 10px;
-  fill: var(--primary-text-color);
+  fill: currentColor;
 }
+/* .address-icon:hover {
+  fill: currentColor;
+} */
 
 .header-mail-link,
 .header-tel-link {
-  color: var(--primary-text-color);
+  display: inline-flex;
+  color: inherit;
 }
 
 .navigation-list-link:hover,
 .navigation-list-link:focus,
-.header-mail-link:hover,
+/* .header-mail-link:hover,
 .header-mail-link:focus,
 .header-tel-link:hover,
-.header-tel-link:focus,
-.address-icon:hover {
+.header-tel-link:focus, */
+.contact-list-item:hover,
+.contact-list-item:focus {
   color: var(--acent-color);
   fill: var(--acent-color);
 }
@@ -315,6 +326,15 @@ img {
   display: flex;
   padding: 0 32px;
 }
+.social-item {
+  color: var(--icon-color);
+}
+.social-item:hover,
+.social-item:focus {
+  color: var(--text-color-on-acent-background);
+  background-color: var(--acent-color);
+  border-radius: 50%;
+}
 .social-link {
   display: inline-flex;
   justify-content: center;
@@ -322,6 +342,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: inherit;
 }
 
 .social-item:not(:last-child) {
@@ -331,15 +352,7 @@ img {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
-}
-
-.social-link:hover,
-.social-link:focus,
-.social-icon:hover,
-.social-icon:focus {
-  background-color: var(--acent-color);
-  fill: var(--primary-background-color);
+  fill: currentColor;
 }
 
 /* ------------------------REGULAR CLIENTS------------------------ */
@@ -358,8 +371,15 @@ img {
 }
 .clients-item {
   margin-right: 30px;
-  /* border: 1px solid #afb1b8;
-  border-radius: 4px; */
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  color: var(--acent-color);
+  border: 1px solid var(--acent-color);
 }
 
 .clients-link {
@@ -368,16 +388,13 @@ img {
   height: 90px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+  color: inherit;
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  border-color: var(--acent-color);
-}
 .clients-icon {
-  fill: #afb1b8;
+  fill: currentColor;
+}
+.clients-icon.client-1 {
   width: 44px;
   height: 49px;
 }
@@ -402,9 +419,6 @@ img {
   height: 45px;
 }
 
-.clients-icon:hover {
-  fill: var(--acent-color);
-}
 /* ------------------------FOOTER------------------------ */
 .footer {
   padding: 60px 0;
